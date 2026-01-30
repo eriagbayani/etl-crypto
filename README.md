@@ -2,6 +2,23 @@
 
 A simple ETL (Extract, Transform, Load) pipeline that fetches cryptocurrency market data from CoinGecko API and saves it to SQLite database or CSV file.
 
+## Usage
+
+1. **Install dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. **Run the ETL pipeline**:
+   ```bash
+   python main.py
+   ```
+
+3. **Generate visualizations**:
+   ```bash
+   python visualize.py
+   ```
+
 ## Flow
 
 ### 1. Extract
@@ -27,6 +44,28 @@ A simple ETL (Extract, Transform, Load) pipeline that fetches cryptocurrency mar
 **File**: `config.py`
 - Database name: `crypto.db`
 - Table name: `crypto_market`
+
+## Visualization
+**File**: `visualize.py`
+
+Generate charts from the database:
+```bash
+python visualize.py
+```
+
+### Sample Charts
+
+**Top 10 Cryptocurrencies by Market Cap**
+![Market Cap Bar Chart](charts/market_cap_bar.png)
+
+**Market Share Distribution**
+![Market Share Pie Chart](charts/market_share_pie.png)
+
+**Price Comparison**
+![Price Comparison](charts/price_comparison.png)
+
+**Price vs Market Cap Analysis**
+![Scatter Plot](charts/price_vs_marketcap.png)
 
 ## Project Structure
 ```

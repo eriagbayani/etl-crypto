@@ -14,7 +14,7 @@ def run_etl():
     # Load csv
     # save_crypto(df)
     # load to db (sqlite)
-    load_data_to_db(df, config.DB_NAME, config.DB_PATH)
+    load_data_to_db(df, config.DB_NAME, config.CRYPTO_TABLE)
     print("ETL completed!")
 
 if __name__ == "__main__":
