@@ -14,6 +14,9 @@ ENV/
 .env
 .env.local
 
+# Google credentials
+credentials.json
+
 # Database files
 *.db
 *.sqlite
