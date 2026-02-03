@@ -161,11 +161,9 @@ exercise-list-etl/
 ├── load/
 │   ├── save_data_csv.py    # Save to CSV file
 │   ├── save_data_db.py     # Save to SQLite database (optional)
-│   └── send_email.py       # Email functionality (optional)
 ├── main.py                 # Main ETL orchestration + n8n webhook
 ├── config.py               # Database configuration
 ├── visualize.py            # Generate charts
-├── scheduler.py            # Scheduler (optional)
 └── requirements.txt        # Python dependencies
 ```
 
