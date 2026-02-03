@@ -1,3 +1,5 @@
+"""Extract cryptocurrency market data from CoinGecko API."""
+
 import requests
 import pandas as pd
 

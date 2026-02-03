@@ -1,8 +1,4 @@
 """Save cryptocurrency data to CSV file."""
-
-import pandas as pd
-
-
 def save_crypto(df, filename='crypto.csv'):
     """
     Save a DataFrame to a CSV file.

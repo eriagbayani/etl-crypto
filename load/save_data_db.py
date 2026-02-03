@@ -1,4 +1,5 @@
-import pandas as pd
+"""Load cryptocurrency data to SQLite database."""
+
 import sqlite3
 
 
