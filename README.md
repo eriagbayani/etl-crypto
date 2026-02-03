@@ -57,6 +57,8 @@ Create a workflow in n8n with these nodes:
 
 5. **Activate** the workflow
 
+![n8n Flow](examples/n8n_flow.png)
+
 ## Usage
 
 ### Run ETL Pipeline
