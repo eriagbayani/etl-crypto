@@ -172,13 +172,7 @@ exercise-list-etl/
 ### Option 1: Windows Task Scheduler
 Schedule `python main.py` to run daily/hourly
 
-### Option 2: Python Scheduler
-```bash
-python scheduler.py
-```
-Runs ETL daily at 7:00 AM
-
-### Option 3: n8n Schedule Trigger
+### Option 2: n8n Schedule Trigger
 Add a Schedule Trigger node in n8n before the webhook to run automatically
 
 ## Why Top 10 Only to Google Sheets?
