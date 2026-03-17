@@ -10,6 +10,9 @@ from transform.clean_data import transform_crypto
 from load.save_data_csv import save_crypto
 from load.save_data_db import load_data_to_db
 import config
+from utils.logger import get_logger
+
+logger = get_logger(__name__)
 
 # Load environment variables from .env file
 load_dotenv()
@@ -31,11 +34,11 @@ def trigger_n8n(df, limit=10):
     try:
         response = requests.post(webhook_url, json=payload, timeout=30)
         if response.status_code == 200:
-            print(f"n8n webhook triggered successfully! Sent top {limit} cryptos.")
+            logger.info("n8n webhook triggered successfully! Sent top %s cryptos.", limit)
         else:
-            print(f"Webhook failed: {response.status_code} {response.text}")
+            logger.error("Webhook failed: %s %s", response.status_code, response.text)
     except Exception as e:
-        print(f"Error triggering webhook: {e}")
+        logger.error("Error triggering webhook: %s", e)
 
 def run_etl():
     """
@@ -58,7 +61,7 @@ def run_etl():
     # Optional: Also load to db (sqlite)
     # load_data_to_db(df, config.DB_PATH, config.CRYPTO_TABLE)
 
-    print("ETL completed!")
+    logger.info("ETL completed!")
 
 if __name__ == "__main__":
     run_etl()
